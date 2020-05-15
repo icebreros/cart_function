@@ -1,0 +1,356 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 10px;
+}
+
+.skrong {
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.widePic {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+
+/*TOP NAV PROPERTIES START*/
+
+#topBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+#menuItem:hover {
+    filter: invert(40%);
+    transition: 0.1s;
+}
+
+.nav {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background-color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    float: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 40px;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: dimgrey;
+    transition: 0.1s;
+}
+
+
+/*TOP NAV PROPERTIES END*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+/*PRODUCT CARD PROPERTIES START*/
+
+.shop-items {
+    display: inline-block;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: inline-block;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.shop-item-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* .container .content-section .card .shop-items .shop-item .shop-item-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+} */
+
+.shop-item-newPrice {
+    color: black;
+    font-weight: black;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.shop-item-price {
+    color: grey;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration: line-through;
+}
+
+.card button {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+
+.card button:hover {
+    opacity: 0.6;
+    transition: 0.1s;
+}
+
+
+/*PRODUCT CARD PROPERTIES END*/
+
+
+/*CONTACT US PROPERTIES START*/
+
+.contactProp {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#inputLabel {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 15px;
+}
+
+#dropLabel {
+    width: 10%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 15px;
+}
+
+
+/*CONTACT US PROPERTIES END*/
+
+body {
+    background-color: #FFFFFF;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-page {
+    height: 500px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 25px;
+    box-sizing: initial;
+    margin: auto;
+    background-color: white;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: ffffff;
+    max-width: 500px;
+    border: 0;
+    margin: 0 auto 0;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form textarea {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    height: 100px;
+    width: 100%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(75, 133, 172);
+}
+
+.button1:hover {
+    background-color: dimgray;
+    color: white;
+    transition: 0.1s;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.shoeOptions {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.shoeOptions select {
+    outline: 1;
+    background: #f2f2f2;
+    width: 6%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.shoeOptions button {
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(75, 133, 172);
+    outline: 1;
+    width: 10%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.shoeOptions button:hover {
+    background-color: dimgray;
+    color: white;
+    transition: 0.1s;
+}
+
+.counter p {
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+}
+
+.counter {
+    background-color: black;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: 0;
+    height: 60px;
+    width: 200px;
+    float: right;
+}
+
+.greeting label {
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0;
+    height: 50px;
+    float: left;
+}
+
+.sale p {
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: relative;
+    float: right;
+    top: 2px;
+    width: 200px;
+}
+
+/* STYLE CSS COPY */
+/* .content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+} */

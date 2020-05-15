@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SZIA</title>
+    <meta name="description" content="SZIA Store" />
+    <meta name="author" content="SitePoint" />
+    <link rel="stylesheet" type="text/css" href="products.css" />
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+
+    </script>
+    <script src="store.js" defer></script>
+</head>
+<div id="topBar">
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <a href="#"><img src="images/menuSquare.png" width="60px" height="60px" id="menuItem" /></a>
+            </td>
+            <td width="33.33%">
+                <center>
+                    <a href="index.html"><img src="images/sziaLogo.png" height="70px" id="menuItem" /></a>
+                </center>
+            </td>
+            <td width="33.33%">
+                <p align="right">
+                    <a href="#"><img src="images/cart.png" width="70px" height="60px" id="menuItem" /></a>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <ul class="nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+<body>
+    <header>
+        <h1>
+            <center>
+                <img src="images/productsT.png" height="40px" />
+            </center>
+        </h1>
+    </header>
+
+
+    <!--
+MAIN BODY
+REMOVE THIS TO INSERT ELEMENTS INTO A NEW PAGE
+-->
+    <!--
+    <section class="container content-section">
+        <h2 class="section-header">MUSIC</h2>
+        <div class="shop-items">
+            <% items.music.forEach(function(item) { %>
+            <div class="shop-item" data-item-id="<%= item.id %>">
+                <span class="shop-item-title"><%= item.name %></span>
+                <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$<%= item.price /100 %></span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+-->
+    <!--
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe1Product.html"><img src="images/shoe1.png" width="250px" height="250px" /></a>
+                    <h1>Jordan Retro 3</h1>
+                    <p class="newPrice">$140</p>
+                    <p class="price">$200</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe2Product.html"><img src="images/shoe2.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Vapormax Plus</h1>
+                    <p class="newPrice">$165</p>
+                    <p class="price">$200</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe3Product.html"><img src="images/shoe3.png" width="250px" height="250px" /></a>
+                    <h1>Jordan Retro 4</h1>
+                    <p class="newPrice">$130</p>
+                    <p class="price">$160</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe4Product.html"><img src="images/shoe4.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Force 1 Low</h1>
+                    <p class="newPrice">$80</p>
+                    <p class="price">$110</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe5Product.html"><img src="images/shoe5.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Max '97</h1>
+                    <p class="newPrice">$120</p>
+                    <p class="price">$170</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe7Product.html"><img src="images/shoe7.png" width="250px" height="250px" /></a>
+                    <h1>Jordan AJ 1 Low</h1>
+                    <p class="newPrice">$70</p>
+                    <p class="price">$90</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+-->
+
+<!-- <table width="100%">
+    <tr>
+        <td width="33.33%">
+            <section class="container content-section">
+                <div class="card">
+                <div class="shop-items">
+                    <% items.music.forEach(function(item) { %>
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                        <span class="shop-item-title"><%= item.name %></span>
+                        <div class="shop-item-details">
+                            <p class="shop-item-price">$<%= item.price /100 %></p>
+                            <p class="shop-item-newPrice">$<%= item.newPrice /100 %></p>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+        </td>
+        </tr> -->
+    <center>
+        <section class="container content-section">
+            
+                
+                    <% items.music.forEach(function(item) { %>
+                        <div class="shop-items">
+                        <div class="card">
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                        <span class="shop-item-title"><%= item.name %></span>
+                        <div class="shop-item-details">
+                            <p class="shop-item-price">$<%= item.price /100 %></p>
+                            <p class="shop-item-newPrice">$<%= item.newPrice /100 %></p>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    </center>
+
+</body>
+<!--
+END OF MAIN BODY
+-->
+
+<footer>
+    <center>
+        <b>
+            ©2020 SZIA, Inc. All rights reserved.
+        </b>
+    </center>
+</footer>
+
+</html>
