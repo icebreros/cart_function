@@ -1,0 +1,146 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.baseFont {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#topBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+#menuItem:hover {
+    filter: invert(40%);
+}
+
+.nav {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background-color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    float: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 40px;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: dimgrey;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+    position: relative;
+    margin: 50px auto 100px;
+}
+
+.loginimg1 {
+    width: 55px;
+    height: 10;
+}
+
+.loginimg2 {
+    width: 25px;
+    height: 30;
+}
+
+.loginimg3 {
+    width: 25px;
+    height: 30;
+}
+
+STRONG {
+    padding-bottom: 400px;
+    font-size: 40px;
+}
+
+.between {
+    margin-top: 30px;
+}
+
+input {
+    margin: 10px;
+}
+
+#error {
+    color: red;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: black;
+    width: 100%;
+    margin: 10px 0 10px 10px;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.links a {
+    line-height: 2;
+    color: black;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #48BBFD;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}

@@ -1,42 +1,97 @@
 {
-    "music": [
+    "products": [
         {
             "id":1,
-            "name": "Album 1",
-            "price": 1299,
-            "imgName": "Album 1.png"
+            "name": "Jordan Retro 3",
+            "price": 20000,
+            "newPrice": 14000,
+            "imgName": "shoe1.png"
         },
         {
             "id":2,
-            "name": "Album 2",
-            "price": 1499,
-            "imgName": "Album 2.png"
+            "name": "Nike Air Vapormax Plus",
+            "price": 20000,
+            "newPrice": 16500,
+            "imgName": "shoe2.png"
         },
         {
             "id":3,
-            "name": "Album 3",
-            "price": 999,
-            "imgName": "Album 3.png"
+            "name": "Jordan Retro 4",
+            "price": 16000,
+            "newPrice": 13000,
+            "imgName": "shoe3.png"
         },
         {
-            "id":1,
-            "name": "Album 4",
-            "price": 1999,
-            "imgName": "Album 4.png"
-        }
-    ],
-    "merch": [
+            "id":4,
+            "name": "Air Force 1 Low",
+            "price": 11000,
+            "newPrice": 8000,
+            "imgName": "shoe4.png"
+        },
         {
             "id":5,
-            "name": "T-Shirt",
-            "price": 1999,
-            "imgName": "Shirt.png"
+            "name": "Nike Air Max '97",
+            "price": 17000,
+            "newPrice": 12000,
+            "imgName": "shoe5.png"
         },
         {
             "id":6,
-            "name": "Coffee Cup",
-            "price": 699,
-            "imgName": "Cofee.png"
+            "name": "Jordan AJ 1 Low",
+            "price": 9000,
+            "newPrice": 7000,
+            "imgName": "shoe7.png"
+        },
+        {
+            "id":7,
+            "name": "Nike Lebron 17",
+            "price": 20000,
+            "newPrice": 16000,
+            "imgName": "shoe8.png"
+        },
+        {
+            "id":8,
+            "name": "Nike Air Max 270",
+            "price": 15000,
+            "newPrice": 11000,
+            "imgName": "shoe9.png"
+        },
+        {
+            "id":9,
+            "name": "Nike Adapt BB",
+            "price": 40000,
+            "newPrice": 35000,
+            "imgName": "shoe10.png"
+        },
+        {
+            "id":10,
+            "name": "Timberland 6\" Single Sole Boots",
+            "price": 15800,
+            "newPrice": 9000,
+            "imgName": "shoe11.png"
+        },
+        {
+            "id":11,
+            "name": "Nike Uptempo 720",
+            "price": 20000,
+            "newPrice": 15000,
+            "imgName": "shoe12.png"
+        },
+        {
+            "id":12,
+            "name": "Jordan Retro 6",
+            "price": 20000,
+            "newPrice": 18000,
+            "imgName": "shoe13.png"
+        }
+    ],
+    "merch":[
+        {
+            "id":12,
+            "name": "Jordan Retro 6",
+            "price": 20000,
+            "newPrice": 18000,
+            "imgName": "shoe13.png"
         }
     ]
 }

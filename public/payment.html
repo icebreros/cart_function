@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="cssFiles/paymentstyle.css" />
+  </head>
+  <div id="topBar">
+    <table width="100%">
+      <tr>
+        <td width="33.33%">
+          <a href="#"
+            ><img
+              src="images/menuSquare.png"
+              width="60px"
+              height="60px"
+              id="menuItem"
+          /></a>
+        </td>
+        <td width="33.33%">
+          <center>
+            <a href="index.html"
+              ><img src="images/sziaLogo.png" height="70px" id="menuItem"
+            /></a>
+          </center>
+        </td>
+        <td width="33.33%">
+          <p align="right">
+            <a href="#"
+              ><img
+                src="images/cart.png"
+                width="70px"
+                height="60px"
+                id="menuItem"
+            /></a>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <ul class="nav">
+      <li><a href="index.html">Products</a></li>
+      <li><a href="index.html">Sale</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+      <li><a href="companyInfo.html">Company Info</a></li>
+      <li><a href="Faq.html">FAQ</a></li>
+      <li><a href="payment.html">Payment</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <body>
+    <div class="baseFont">
+    <div class="container">
+      <h1>Credit Card Information</h1>
+      <form>
+        <p><img src="images/lock.jpg" class="lock" /> Credit/Debit Card</p>
+
+        <img src="https://img.icons8.com/color/36/000000/visa.png" />
+        <img src="https://img.icons8.com/color/36/000000/mastercard.png" />
+        <img src="https://img.icons8.com/color/36/000000/amex.png" />
+        <hr />
+        <div class="labels-inputs">
+          <label>Card Number </label>
+          <input
+            class="cardinformation cardnumber"
+            type="tel "
+            name="Card Number "
+            placeholder="Enter Card Number "
+                 minlength="16"
+                 required
+          />
+          <label>Expiration Date </label>
+          <input
+            class="cardinformation"
+            type="tel "
+            name="Exption Date "
+            placeholder="MM/YY "
+                 required
+          />
+        </div>
+        <div class="labels-inputs">
+          <label>CVV </label>
+          <input
+            class="cardinformation"
+            type="tel "
+            name="Secuirty Code "
+            placeholder="XXX "
+                 required
+          />
+        </div>
+        <div class="labels-inputs">
+          <label>Card Holder Name </label>
+          <input
+            class="cardinformation nameholder"
+            type="tel "
+            name="Card Holder Name "
+            placeholder="e.g John White "
+                 required
+          />
+        </div>
+        <div class="labels-inputs">
+          <button class="btn">Checkout</button>
+        </div>
+      </form>
+    </div>
+    </div>
+    <div>
+      <footer>
+        <b>
+          ©2020 SZIA, Inc. All rights reserved.
+        </b>
+      </footer>
+    </div>
+  </body>
+</html>

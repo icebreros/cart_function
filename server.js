@@ -37,13 +37,14 @@ app.post('/purchase', function(req, res) {
             res.status(500).end()
         } else {
             const itemsJson = JSON.parse(data)
-            const itemsArray = itemsJson.music.concat(itemsJson.merch)
+            const itemsArray = itemsJson.products.concat()
             let total = 0
             req.body.items.forEach(function(item){
                 const itemJson = itemsArray.find(function(i){
                     return i.id == item.id
                 })
-                total = total + itemJson.price * item.quantity
+                console.log(`PRICE VALUE BEFORE: ${itemJson.newPrice}`)
+                total = total + itemJson.newPrice * item.quantity       
             })
 
             stripe.charges.create({
@@ -52,7 +53,7 @@ app.post('/purchase', function(req, res) {
                 currency: 'usd'
             }).then(function(){
                 console.log('charge successful')
-                res.json({message: 'successfully purchased items'})
+                res.json({message: 'Your Items have been successfully purchased!'})
             }).catch(function(){
                 console.log('charge failed')
                 res.status(500).end()

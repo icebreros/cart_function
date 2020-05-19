@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="cssFiles/signupstyles.css">
+    <script>
+    function checkEmail() {
+            var x = document.getElementById("email").value;
+            //var x = "test";
+            if (x.includes(" ")) {
+                alert("You cannot have a space in your email.")
+            }
+
+            var validEmailAmp = x.includes("@");
+            var validEmailDot = x.includes(".");
+            var boolTest = validEmailAmp & validEmailDot;
+
+            if (!boolTest) {
+                alert("Your email is missing either an at symbol(@) or a period(.).");
+            }
+        }
+    </script>
+
+
+</head>
+<div id="topBar">
+    <table width="100%">
+        <tr>
+            <td width=33.33%>
+                <p align="left">
+                    <a href="#"><img src="images/menuSquare.png" width=60px height=60px id="menuItem"></a>
+                </p>
+            </td>
+            <td width=33.33%>
+                <center>
+                    <a href="index.html"><img src="images/sziaLogo.png" height=70px id="menuItem"></a>
+                </center>
+            </td>
+            <td width=33.33%>
+                <p align="right">
+                    <a href="#"><img src="images/cart.png" width=70px height=60px id="menuItem"></a>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <ul class="nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+<body>
+    <div class="login-page">
+
+
+        <div class="form">
+
+            <center>
+                <strong>
+                    <div class="baseFont">Sign Up</div>
+                </strong>
+            </center>
+            <form class="register-form" onsubmit="checkEmail()">
+                <input type="text" id="name" placeholder="Full Name" required/>
+                <input type="password" id="password" name="password" minlength="8" required placeholder="Password">
+                <input type="text" placeholder="Email" id="email" required/>
+                <input type="text" placeholder="Phone Number" id="phone" required/>
+                <button class="button" onclick="signUp()">Submit</button>
+
+                <p><a href="login.html" class="links">Already a Member?</a></p>
+            </form>
+
+        </div>
+
+    </div>
+    <br>
+    <footer>
+        <center>
+            <b>
+        ©2020 SZIA, Inc. All rights reserved.
+            </b>
+        </center>
+    </footer>
+
+    <script src="singup.js"></script>
+</body>
+
+</html>

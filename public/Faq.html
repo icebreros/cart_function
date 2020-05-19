@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FAQ</title>
+    <meta name="description" content="SZIA Store" />
+    <meta name="author" content="SitePoint" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/index.css" />
+    <style>
+      .statement-container {
+        line-height: 1.6em;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        word-spacing: 0.5em;
+        border: 5px #ccc solid;
+        border-radius: 80px;
+        text-decoration: none;
+        padding: 40px;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 2em;
+        margin-bottom: 2em;
+      }
+      .statement-container p {
+        text-indent: 2em;
+      }
+      .statement-container h1,
+      h2,
+      a {
+        text-align: center;
+      }
+      .greetings-box {
+        display: flex;
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(to right, grey 50%, black 50%);
+      }
+      .greetings-box h1 {
+        font-size: 70px;
+        text-indent: 0em;
+        line-height: 1;
+        font-weight: bold;
+        color: white;
+      }
+      #overRide {
+        font-size: 70px;
+        text-indent: 8.5em;
+        line-height: 4;
+        font-weight: bold;
+      }
+      @media only screen and (max-width: 1400px) {
+        .greetings-box {
+          display: none !important;
+        }
+      }
+      .links {
+        line-height: 2;
+        color: black;
+        text-decoration: none;
+      }
+
+      .links:hover {
+        color: #48bbfd;
+        font-size: 18px;
+        transition: 0.1s;
+      }
+      ul#sectionJump li {
+        display: inline;
+        padding-left: 60px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      //very similar to the one on w3schools. i'll update this later...
+      function searchFunction() {
+        //onkeyup event: occurs when the user releases a key on the keyboard.This triggers this function
+        var input;
+        var filter;
+        var ul;
+        var li;
+        var a;
+        var i;
+        input = document.getElementById("myinput"); //Retrieve Input or whatever is in the textbox
+        input_filtered = input.value.toUpperCase(); // Filters the Input to upper_case
+        ul = document.getElementById("sectionJump"); //Targets the tag with the unique_id
+        li = ul.getElementsByTagName("li"); //Using unique_id identified, get all elements associated with the tag li. each list item is referenced like an array
+        //! Function loops and hides the selected listed_item with setting the display css to none
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          // console.log(a.innerHTML.toUpperCase().indexOf(input_filtered));
+          if (a.innerHTML.toUpperCase().indexOf(input_filtered) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </head>
+  <div id="topBar">
+    <table width="100%">
+      <tr>
+        <td width="33.33%">
+          <a href="#"
+            ><img
+              src="images/menuSquare.png"
+              width="60px"
+              height="60px"
+              id="menuItem"
+          /></a>
+        </td>
+        <td width="33.33%">
+          <center>
+            <a href="index.html"
+              ><img src="images/sziaLogo.png" height="70px" id="menuItem"
+            /></a>
+          </center>
+        </td>
+        <td width="33.33%">
+          <p align="right">
+            <a href="#"
+              ><img
+                src="images/cart.png"
+                width="70px"
+                height="60px"
+                id="menuItem"
+            /></a>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <ul class="nav">
+      <li><a href="index.html">Products</a></li>
+      <li><a href="index.html">Sale</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+      <li><a href="companyInfo.html">Company Info</a></li>
+      <li><a href="Faq.html">FAQ</a></li>
+      <li><a href="payment.html">Payment</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+  <body>
+    <div class="greetings-box">
+      <h1>Greetings</h1>
+      <h1 id="overRide">How can we help?</h1>
+    </div>
+
+    <div class="statement-container">
+      <h1><i>Frequently Asked Questions </i></h1>
+      <input
+        type="text"
+        name="search"
+        value=""
+        autocomplete="on"
+        id="myinput"
+        onkeyup="searchFunction()"
+        placeholder="What is your question related to?"
+      />
+      <ul id="sectionJump">
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#cash-and-payment">Cash and Payment</a></li>
+        <li><a href="#most-frequently-asked">Frequently Asked</a></li>
+        <li><a href="#products">Product Design</a></li>
+        <li><a href="#products">Ordering</a></li>
+        <li><a href="contactUs.html">Contacting</a></li>
+        <li><a href="companyInfo.html">Policy & Standards</a></li>
+      </ul>
+    </div>
+
+    <div class="statement-container">
+      <h2 id="most-frequently-asked">Most Commonly Ask Questioned</h2>
+      <hr />
+      <h4>Question1:What is the life expectancy of the model BH_324*4?</h4>
+      <p>
+        Life expectancy for the BH_324*4 can be estimated to be around 48-
+        1,432,452 hours of usage. Depending on the how the shoe is handled and
+        cared for can exponentially increase the total amount of a firm study
+        sole.
+      </p>
+      <br />
+      <h4>
+        Question2:Why are SZIA shoes the greatest certified A++ out in the
+        market?
+      </h4>
+      <p>
+        All of SZIA shoes come from organic sources. The fabric and material
+        used is also hand made to ensure the finest quality with little room for
+        error.
+      </p>
+      <br />
+      <h4>Question3:How many customers are guarenteed 100% satisfication?</h4>
+      <p>
+        SZIA shoes hand crafting quality never fails to meet the customers
+        needs. As a company, our first priority is to make sure our goals meet
+        the goals of the community and that is to guarentee the guarentee
+        satisfcation.Please donate.
+      </p>
+    </div>
+
+    <div class="statement-container">
+      <h2 id="cash-and-payment">Cash and Payment</h2>
+      <hr />
+      <h4>Question1: What are the credit/debit card options?</h4>
+      <p>
+        We have tons of availabiltiy to choose from. When you've come to the
+        decision of purchasing a shoe, you will be re-directed to the payment
+        page. There you will see accepted cards. We are constantly growing but
+        to up to current date, the following vendors are available: Bank of
+        America, Visa, American Express , Bitcoin , and American Discover.
+      </p>
+      <br />
+      <h4>Question2: How long does it take for the order to be processed?</h4>
+      <p>
+        It takes about 15-20 business days for the order to be processed. Our
+        processing takes military grade encryption to 592-Sword Fish encryption
+        to ensure the safest transaction limiting the probability of fraud.
+      </p>
+      <br />
+      <h4>
+        Question3: Is there a loan or monthly payment you can take to purchase
+        the shoe?
+      </h4>
+      <p>
+        We are not in any affiliation with a loan service provider. We do not
+        take any legal responsibility of whatever means to make the money in
+        order to purchase one our products. If any you have another clarifying
+        questions about this please refer to our terms and agreement policy.
+      </p>
+    </div>
+
+    <div class="statement-container">
+      <h2 id="products">Products</h2>
+      <hr />
+      <h4>Question1: What happens when the products are no longer on sale?</h4>
+      <p>
+        We do sales intermittently. If you would like to be notified of a sale
+        available, please enter your email in the monthly subscription box.
+      </p>
+      <br />
+      <h4>Question2:What do i do if the wrong product was shipped?</h4>
+      <p>
+        You can contact our Help Desk services by sending a direct message on
+        twitter, facebook or email found on the company information page.
+      </p>
+      <br />
+      <h4>
+        Question3: Which shipping provider service is used to deliver the
+        package?
+      </h4>
+      <p>
+        We are in affiliation with mutliple shipment providers. The selection is
+        subject to change depending on delays and efficient routing.
+      </p>
+    </div>
+
+    <div class="statement-container">
+      <h2 id="returns">Returns</h2>
+      <hr />
+      <h4>Question1: I want to return my purchase. What Should I do?</h4>
+      <p>
+        Email the SZIA email that be can found the email address or alternatvie
+        refer to our twitter or facebook. We will get back to you as soon as
+        possible.
+      </p>
+      <br />
+      <h4>Question2:When can i not return my product?</h4>
+      <p>
+        Return policy states that a product is only eligible within 14 days. The
+        must also meet additional elgible requirements that can be found in the
+        Policy & Agreement page as well.
+      </p>
+      <br />
+      <h4>Question3:Is the shipping fees also refunded?</h4>
+      <p>
+        Depending on the the carrier service and market conditions, shipment
+        prices being refunded are subject to change
+      </p>
+    </div>
+  </body>
+  <footer>
+    <center>
+      <b>
+        ©2020 SZIA, Inc. All rights reserved.
+      </b>
+    </center>
+  </footer>
+</html>

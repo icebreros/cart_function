@@ -6,7 +6,9 @@ body {
 
 footer {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    padding: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    position: relative;
 }
 
 .skrong {
@@ -16,11 +18,44 @@ footer {
     font-weight: bold;
 }
 
+
 .widePic {
     object-fit: cover;
     width: 100%;
     height: 500px;
+    display: block;
 }
+
+
+.adPic {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+}
+
+.adPic button {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 40px;
+}
+
+.adPic button:hover {
+    opacity: .7;
+    transition: .1s;
+}
+
+
+
+
+
 
 
 /*TOP NAV PROPERTIES START*/
@@ -30,11 +65,13 @@ footer {
     position: sticky;
     top: 0;
     background: white;
+    z-index: 3;
 }
 
 #menuItem:hover {
     filter: invert(40%);
     transition: 0.1s;
+
 }
 
 .nav {
@@ -46,6 +83,7 @@ footer {
     padding: 0;
     text-align: center;
     font-size: 18px;
+    z-index: 3;
 }
 
 .nav li {
@@ -68,57 +106,25 @@ footer {
 
 /*TOP NAV PROPERTIES END*/
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-  }
-  
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
-
 
 /*PRODUCT CARD PROPERTIES START*/
-
-.shop-items {
-    display: inline-block;
-}
-
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: inline-block;
+    margin: auto;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.shop-item-title {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-style: bold;
-    font-size: 20px;
-}
-
-/* .container .content-section .card .shop-items .shop-item .shop-item-title {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-} */
-
-.shop-item-newPrice {
+.newPrice {
     color: black;
     font-weight: black;
     font-size: 22px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.shop-item-price {
+.price {
     color: grey;
     font-size: 22px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -339,150 +345,4 @@ a {
     width: 200px;
 }
 
-/* STYLE CSS COPY */
-/* .content-section {
-    margin: 1em;
-}
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.5em;
-}
-.section-header {
-    font-family: "Metal Mania";
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-} */
-
-.grider-container {
-    display: grid;
-    grid-template-columns: 100%;
-    float: left;
-    text-align: center;
-  }
-
-.main-title {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 50px;
-    text-align: center;
-}
-
-.cart-header {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #333;
-}
-
-.cart-column {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    margin-right: 1.5em;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-
-.cart-row {
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.cart-item {
-    width: 45%;
-}
-
-.cart-price {
-    width: 20%;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.cart-quantity {
-    width: 35%;
-}
-
-.cart-item-title {
-    color: #333;
-    font-style: bold;
-    margin-left: .5em;
-    font-size: 1.2em;
-}
-
-.cart-item-image {
-    width: 75px;
-    height: auto;
-    border-radius: 10px;
-}
-.cart-quantity-input {
-    height: 34px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
-    padding: 0;
-    text-align: center;
-    font-size: 1.2em;
-    margin-right: 25px;
-}
-
-.cart-row:last-child {
-    border-bottom: 1px solid black;
-}
-
-.cart-row:last-child .cart-column {
-    border: none;
-}
-
-.cart-total {
-    text-align: end;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.cart-total-title {
-    font-weight: bold;
-    font-size: 2em;
-    color: black;
-    margin-right: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.cart-total-price {
-    color: #333;
-    font-size: 1.5em;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.btn-purchase {
-    display: block;
-    margin: 40px auto 80px auto;
-    font-size: 1.75em;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btn-purchase:hover {
-    opacity: 0.6;
-    transition: 0.1s;
-}
-.btn-danger {
-    color: white;
-    background-color: #EB5757;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-
-.btn-danger:hover {
-    background-color: #CC4C4C;
-}

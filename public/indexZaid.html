@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SZIA</title>
+    <meta name="description" content="SZIA Store" />
+    <meta name="author" content="SitePoint" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/indexZaid.css" />
+</head>
+<div id="topBar">
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <a href="#"><img src="images/menuSquare.png" width="60px" height="60px" id="menuItem" /></a>
+            </td>
+            <td width="33.33%">
+                <center>
+                    <a href="index.html"><img src="images/sziaLogo.png" height="70px" id="menuItem" /></a>
+                </center>
+            </td>
+            <td width="33.33%">
+                <p align="right">
+                    <a href="#"><img src="images/cart.png" width="70px" height="60px" id="menuItem" /></a>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <ul class="nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+<body>
+    <header>
+        <h1>
+            <center>
+                <img src="images/productsT.png" height="40px" />
+                <h3>Welcome back Zaid</h3>
+                <hr>
+            </center>
+        </h1>
+    </header>
+    <div class="sale">
+        <p>Sale Ends in:</p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="counter">
+        <p id="countdown">25:00</p>
+        <script src="countdown.js"></script>
+
+    </div>
+    <div class="greeting">
+        <label id="lblGreetings"></label>
+    </div>
+
+    <!--
+MAIN BODY
+REMOVE THIS TO INSERT ELEMENTS INTO A NEW PAGE
+-->
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe1Product.html"><img src="images/shoe1.png" width="250px" height="250px" /></a>
+                    <h1>Jordan Retro 3</h1>
+                    <p class="newPrice">$140</p>
+                    <p class="price">$200</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe2Product.html"><img src="images/shoe2.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Vapormax Plus</h1>
+                    <p class="newPrice">$165</p>
+                    <p class="price">$200</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe3Product.html"><img src="images/shoe3.png" width="250px" height="250px" /></a>
+                    <h1>Jordan Retro 4</h1>
+                    <p class="newPrice">$130</p>
+                    <p class="price">$160</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe4Product.html"><img src="images/shoe4.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Force 1 Low</h1>
+                    <p class="newPrice">$80</p>
+                    <p class="price">$110</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe5Product.html"><img src="images/shoe5.png" width="250px" height="250px" /></a>
+                    <h1>Nike Air Max '97</h1>
+                    <p class="newPrice">$120</p>
+                    <p class="price">$170</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+
+            <td width="33.33%">
+                <div class="card">
+                    <a href="productPages/shoe7Product.html"><img src="images/shoe7.png" width="250px" height="250px" /></a>
+                    <h1>Jordan AJ 1 Low</h1>
+                    <p class="newPrice">$70</p>
+                    <p class="price">$90</p>
+                    <p><button>ADD TO CART</button></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h1>
+        <center>
+            <a href="#"><img src="images/viewProduct.png" height="40px" id="menuItem" /></a>
+        </center>
+    </h1>
+    <h2>
+        <center>
+            <img class="widePic" src="images/airDior.jpg" />
+        </center>
+    </h2>
+</body>
+<script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning Shopper';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon Shopper';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening Shopper';
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b>,Welcome to SZIA!';
+</script>
+<!--
+END OF MAIN BODY
+-->
+
+<footer>
+    <center>
+        <b>
+        ©2020 SZIA, Inc. All rights reserved.
+      </b>
+    </center>
+</footer>
+
+</html>

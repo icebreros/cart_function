@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Company Information</title>
+    <meta name="description" content="SZIA Store" />
+    <meta name="author" content="SitePoint" />
+    <style>
+      #PanelNavigation {
+        display: none;
+        border: 5px grey solid;
+        margin-top: 160px;
+        padding-top: 20px;
+        width: 230px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transition: all ease-in-out 200ms;
+        -webkit-transition: all ease-in-out 200ms;
+      }
+      .mob-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 28px;
+      }
+
+      .mob-nav :hover {
+        background-color: dimgrey;
+        transition: 0.1s;
+      }
+
+      .mob-nav li {
+        color: white;
+        list-style: none;
+        margin-bottom: 80px;
+      }
+
+      /*TOP NAV PROPERTIES START*/
+      #topBar table {
+        width: 100%;
+      }
+      #topBar table td {
+        width: 33.33%;
+      }
+      #topBar p {
+        text-align: right;
+      }
+
+      #CartLogo {
+        height: 60px;
+        width: 70px;
+      }
+
+      #centerLogo {
+        text-align: center;
+      }
+
+      #MenuLogo {
+        width: 60px;
+        height: 60px;
+      }
+      #BrandLogo {
+        height: 70px;
+      }
+      #topBar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: white;
+      }
+      #menuItem:hover {
+        filter: invert(40%);
+        transition: 0.1s;
+      }
+      .nav {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow: hidden;
+        background-color: black;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 18px;
+      }
+      .nav li {
+        display: inline;
+      }
+      .nav a {
+        float: none;
+        display: inline-block;
+        text-decoration: none;
+        padding: 13px 40px;
+        color: white;
+      }
+      .nav a:hover {
+        background-color: dimgrey;
+        transition: 0.1s;
+      }
+
+      /*TOP NAV PROPERTIES END*/
+
+      .chat-container {
+        border: #333;
+        border-style: solid;
+        background-color: #ddd;
+        width: 20%;
+        height: 30%;
+        /*Scrollbar once the height of the container is overflowed */
+        overflow-y: scroll;
+        /*Bottom-Right placement. Margin for some cushion space from the edge of the screen. */
+        position: fixed;
+        margin-right: 20px;
+        bottom: 0;
+        right: 0;
+      }
+      .chat-container li {
+        padding-left: 0;
+      }
+      .chat-container a {
+        color: darkblue;
+      }
+      .chat-container ul {
+        padding-left: 0%;
+        list-style: none;
+      }
+      .chat-container input {
+        width: 100%;
+      }
+
+      .statement-container {
+        line-height: 1.6em;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        word-spacing: 0.5em;
+        border: 5px #ccc solid;
+        border-radius: 80px;
+        text-decoration: none;
+        padding: 40px;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 2em;
+        margin-bottom: 2em;
+      }
+      .statement-container h1 {
+        text-align: center;
+      }
+      table.table_data td {
+        padding-right: 100px;
+        border-bottom: dotted 1px #333;
+      }
+      /*Overwrite rules for smaller screen */
+      @media only screen and (max-width: 600px) {
+        .chat-container {
+          display: none;
+        }
+        .statement-container {
+          line-height: 1.6em;
+          font-size: 12px;
+          font-weight: 300;
+          letter-spacing: 0em;
+          word-spacing: 0.5em;
+          border: 5px #ccc solid;
+          border-radius: 80px;
+          padding: 40px;
+          margin: 0;
+        }
+        table.table_data td {
+          padding-right: 15px;
+        }
+      }
+    </style>
+    <script>
+      function openForm() {
+        document.getElementById("switchControl").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("switchControl").style.display = "none";
+      }
+
+      function supportBot() {
+        var today = new Date();
+
+        var time =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+        var dateTime = time;
+        console.log(dateTime);
+
+        var input_message = document.getElementById("userChat").value;
+        var filter_input = input_message.toLowerCase();
+
+        const target_id = document.getElementById("myList");
+        //New list item (<li>Me:Your_message_typed<li>)
+        let UserInput = document.createElement("li");
+        UserInput.textContent = "[" + dateTime + "]" + "Me:" + input_message;
+        target_id.appendChild(UserInput);
+
+        var keyWords = [
+          ["website", "#table_data", "General Info  "],
+          ["email", "#table_data", "General Info  "],
+          ["finance", "#finance_data", "Financials  "],
+        ];
+
+        const target_id2 = document.getElementById("myList");
+        let BritainOutput = document.createElement("li");
+
+        BritainOutput.textContent =
+          "[" +
+          dateTime +
+          "]" +
+          "SZIA: You might find any of the following helpful:";
+        target_id2.appendChild(BritainOutput);
+
+        for (referenceRow in keyWords) {
+          setTimeout(function () {
+            console.log("delay .5s print");
+          }, 500);
+
+          if (filter_input.includes(keyWords[referenceRow][0])) {
+            checkerFound = false;
+            let a = document.createElement("a");
+            var linkText = document.createTextNode(keyWords[referenceRow][2]);
+            a.appendChild(linkText);
+            a.onclick = "method(); return false";
+            a.href = keyWords[referenceRow][1];
+            target_id2.appendChild(a);
+            checkerFound = false;
+          } else if (filter_input == "") {
+            // if input is empty
+            BritainOutput.textContent =
+              "[" + dateTime + "]" + "SZIA: Try searching for a keyword";
+            target_id2.appendChild(BritainOutput);
+            break;
+          }
+        }
+        if (checkerFound) {
+          console.log(checkerFound);
+          console.log("hello man");
+          BritainOutput.textContent =
+            "[" + dateTime + "]" + "SZIA: Try searching for another keyword";
+          target_id2.appendChild(BritainOutput);
+        }
+      }
+      var toggleStatus = 1; //Toggle Status 1 means "On" , 0 is "OFF"
+
+      function toggleSideNav() {
+        if (toggleStatus == 1) {
+          document.getElementById("PanelNavigation").style.display = "block";
+          document.getElementById("PanelNavigation").style.left = "-240px";
+          toggleStatus = 0;
+        } else if (toggleStatus == 0) {
+          document.getElementById("PanelNavigation").style.left = "0px";
+          toggleStatus = 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="topBar">
+      <table width="100%">
+        <tr>
+          <td width="33.33%">
+            <a href="#"
+              ><img
+                src="images/menuSquare.png"
+                width="60px"
+                height="60px"
+                id="menuItem"
+                onclick="toggleSideNav()"
+            /></a>
+          </td>
+          <td width="33.33%">
+            <center>
+              <a href="index.html"
+                ><img src="images/sziaLogo.png" height="70px" id="menuItem"
+              /></a>
+            </center>
+          </td>
+          <td width="33.33%">
+            <p align="right">
+              <a href="#"
+                ><img
+                  src="images/cart.png"
+                  width="70px"
+                  height="60px"
+                  id="menuItem"
+              /></a>
+            </p>
+          </td>
+        </tr>
+      </table>
+      <ul class="nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <nav id="PanelNavigation">
+      <ul class="mob-nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <br />
+    <div id="switchControl" class="chat-container">
+      <button class="chat" onclick="closeForm()">Close Chat</button>
+      <h3>SZIA:How can we help?</h3>
+      <ul id="myList"></ul>
+      <input id="userChat" placeholder="Enter What you're looking for" />
+      <button onclick="supportBot()">Send Message</button>
+    </div>
+    <div class="statement-container">
+      <h1><i>Mission Statement </i></h1>
+      <hr />
+      <p>
+        SZIA's mission statement combines both the values that bring them market
+        success (building safe, high-quality products) and the values that
+        contribute to a better world (philanthropic efforts to help the
+        environment). For the people behind the brand, "We Will make a
+        difference Together" In the name of this cause, the company donates
+        time, services, and at least 43% of its sales to hundreds of free shoe
+        company services If your company has a similar focus on growing your
+        business and giving back, think about talking about both the benefit you
+        bring to customers and the value you want to bring to a greater cause in
+        your mission statement.
+      </p>
+    </div>
+    <div class="statement-container">
+      <h1><i>General Info</i></h1>
+      <hr />
+      <table id="table_data">
+        <tr>
+          <td><strong>Industries</strong></td>
+          <td>Fashion , Retail</td>
+        </tr>
+        <tr>
+          <td><strong>Headquaters Regions</strong></td>
+          <td>European Union</td>
+        </tr>
+        <tr>
+          <td><strong>Founded Date</strong></td>
+          <td>2020</td>
+        </tr>
+        <tr>
+          <td><strong>Founders</strong></td>
+          <td>Ivan, Zaid, Shamar, Aaron</td>
+        </tr>
+        <tr>
+          <td><strong>Founders</strong></td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><strong>Legal Name</strong></td>
+          <td>SZIA LCC</td>
+        </tr>
+        <tr>
+          <td><strong>IPO Status</strong></td>
+          <td>Private</td>
+        </tr>
+        <tr>
+          <td><strong>Website</strong></td>
+          <td>https://singhaaron.github.io/SZIA_Storefront/</td>
+        </tr>
+        <tr>
+          <td><strong>Twitter</strong></td>
+          <td>SZIA TweetDesk</td>
+        </tr>
+        <tr>
+          <td><strong>Phone Number</strong></td>
+          <td>(510)432-4234</td>
+        </tr>
+        <tr>
+          <td><strong>Phone Number</strong></td>
+          <td>Szia_help_desk@gmail.com</td>
+        </tr>
+      </table>
+    </div>
+    <div class="statement-container">
+      <h1><i>Financials</i></h1>
+      <hr />
+      <table id="finance_data">
+        <tr>
+          <td><strong>Year:</strong></td>
+          <td><strong>2016</strong></td>
+          <td><strong>2017</strong></td>
+          <td><strong>2018</strong></td>
+          <td><strong>2019</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Net Income</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+        <tr>
+          <td><strong>Total Assets</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+        <tr>
+          <td><strong>Total Liabilities</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+
+        <tr>
+          <td><strong>CashFlow</strong></td>
+          <td><strong>2016</strong></td>
+          <td><strong>2017</strong></td>
+          <td><strong>2018</strong></td>
+          <td><strong>2019</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Net Operting Cash Flow</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+        <tr>
+          <td><strong>Net Investing Cash Flow</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+        <tr>
+          <td><strong>Net Investing Cash Flow</strong></td>
+          <td>12.12B</td>
+          <td>43.12B</td>
+          <td>43.43B</td>
+          <td>15.15B</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <footer>
+    ©2020 SZIA, Inc. All rights reserved.
+  </footer>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="cssFiles/loginstyle.css" />
+</head>
+<div id="topBar">
+    <table width="100%">
+        <tr>
+            <td width="33.33%">
+                <a href="#"><img src="images/menuSquare.png" width="60px" height="60px" id="menuItem" /></a>
+            </td>
+            <td width="33.33%">
+                <center>
+                    <a href="index.html"><img src="images/sziaLogo.png" height="70px" id="menuItem" /></a>
+                </center>
+            </td>
+            <td width="33.33%">
+                <p align="right">
+                    <a href="#"><img src="images/cart.png" width="70px" height="60px" id="menuItem" /></a>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <ul class="nav">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="index.html">Sale</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="companyInfo.html">Company Info</a></li>
+        <li><a href="Faq.html">FAQ</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+<body>
+    <div class="container">
+        <form>
+            <strong>
+          <div class="baseFont">
+          Log In
+          </div>
+        </strong>
+            <div class="between">
+                <img class="loginimg2" src="images/user.png" />
+                <label class="baseFont"> User Email </label>
+                <input type="text" id="emailLogin" placeholder="Enter Your Email" required/>
+                <br />
+                <img class="loginimg3" src="images/password.png" />
+                <label class="baseFont"> Password </label>
+                <input type="Password" id="passwordLogin" placeholder="Enter Your Password" required />
+                <button onclick="login()" type="button">Submit</button>
+                <p id="error"></p>
+                <br />
+            </div>
+            <div class="links">
+                <a href="#" class="baseFont">Forget Your Email or Password?</a>
+                <br />
+                <a href="loginSignup.html" class="baseFont"> Not a Member Yet?</a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <b>
+        ©2020 SZIA, Inc. All rights reserved.
+      </b>
+    </footer>
+    <script src="singUp.js"></script>
+</body>
+
+
+</html>

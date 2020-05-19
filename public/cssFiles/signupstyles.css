@@ -1,0 +1,179 @@
+html, body {
+margin:0;
+padding:0;
+}
+footer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 10px;
+}
+
+.baseFont {
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 40px;
+}
+
+STRONG {
+    padding-bottom: 400px;
+    font-size: 40px;
+    margin: 10px auto auto;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.links {
+    line-height: 2;
+    color: black;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.links:hover {
+    color: #48BBFD;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+/*TOP NAV PROPERTIES START*/
+
+#topBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+#menuItem:hover {
+    filter: invert(40%);
+}
+
+.nav {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background-color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    float: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 40px;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: dimgrey;
+}
+
+
+/*TOP NAV PROPERTIES END*/
+
+
+/*PRODUCT CARD PROPERTIES START*/
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.card button {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+
+.card button:hover {
+    opacity: 0.6;
+}
+
+
+/*PRODUCT CARD PROPERTIES END*/
+
+body {
+    background-color: #FFFFFF;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+/*FORM PROPERTIES START*/
+.form {
+    background: ffffff;
+    width: 340px;
+    border: 0;
+    margin: 10px auto;
+    padding: 45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0, 0, 15;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: black;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(75, 133, 172);
+}
+
+.button1:hover {
+    background-color: dimgray;
+    color: white;
+    transition: 0.1s;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+/*FORM PROPERTIES END*/
